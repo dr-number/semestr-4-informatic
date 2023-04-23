@@ -1,4 +1,4 @@
-from helpers import get_text_color, input_number, COLOR_GREEN, COLOR_FAIL
+from helpers import get_text_color, input_number, COLOR_GREEN, COLOR_FAIL, COLOR_WARNING
 import math
 
 _DEFAULT_A = 12.6
@@ -15,6 +15,13 @@ def init():
 
     a = input_number(f'Введите значение а: (по умолчанию {_DEFAULT_A})', _DEFAULT_A)
     x = input_number(f'Введите значение x: (по умолчанию {_DEFAULT_X})', _DEFAULT_X)
+
+    print(
+        f'\n{get_text_color("Исходные данные:", COLOR_WARNING)}\n'
+        f'{get_text_color("a", COLOR_GREEN)} = {get_text_color(a, COLOR_GREEN)}\n'
+        f'{get_text_color("x", COLOR_GREEN)} = {get_text_color(x, COLOR_GREEN)}\n'
+    )
+    
 
     sin_x = math.sin(x) 
     z = a * sin_x
@@ -37,5 +44,6 @@ def init():
         )
         return
 
-    print(f'\n{get_text_color(f"f = {f}", COLOR_GREEN)}')
-    print(f'\n{get_text_color(f"y ", COLOR_GREEN)} = f + a = {f} + {a} {get_text_color(f"= {f + a}", COLOR_GREEN)}')
+    print(f'{get_text_color(f"f = {f}", COLOR_GREEN)}\n')
+    print(f'{get_text_color("Итоговый результат вычислений:", COLOR_GREEN)}\n')
+    print(f'{get_text_color(f"y ", COLOR_GREEN)} = f + a = {f} + {a} {get_text_color(f"= {f + a}", COLOR_GREEN)}')
