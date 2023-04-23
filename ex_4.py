@@ -35,11 +35,8 @@ def init():
         print(f'Т.к {t} <= 2.4 => s = t + 2.4 = {t} + 2.4 = {s}')
 
     if s is None:
-        print(
-            f'{get_text_color(f"Ошибка Т.к t = {t} не подходит ни под одно условие задачи!", COLOR_FAIL)}'
-        )
+        print(get_text_color(f"Ошибка Т.к t = {t} не подходит ни под одно условие задачи!", COLOR_FAIL))
         return
 
-    print(f'{get_text_color("Итоговый результат вычислений:", COLOR_GREEN)}\n')
+    print(get_text_color("\nИтоговый результат вычислений:", COLOR_GREEN))
     print(f'{get_text_color(f"s ", COLOR_GREEN)} = {get_text_color(s, COLOR_GREEN)}')
-    
