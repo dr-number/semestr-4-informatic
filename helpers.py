@@ -20,5 +20,7 @@ def input_number(text: str, default_value: float)-> float:
             return default_value
         elif is_number(number):
             return float(number)
+        else:
+            print(f'{get_text_color(f"{number} - не число! Повторите ввод!\n", COLOR_FAIL)}')
             
     return 0.0
