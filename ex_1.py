@@ -9,7 +9,6 @@ _DEFAULT_VN = 154
 _DEFAULT_F1 = 1250
 
 def init():
-    print(get_text_color("\nЛарионов гр. 210з. Информатика. Индивидуальное задание № 1. Вариант 14.\n", COLOR_WARNING))
     print(
         f'Вычислить уровень расчетной рентабельности по формуле: {get_text_color("Kpp = P/T", COLOR_GREEN)} где\n'
         f'{get_text_color("P = Pб - Pfe - Pf - Pk", COLOR_GREEN)};\n'
