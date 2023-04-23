@@ -21,4 +21,4 @@ def input_number(text: str, default_value: float)-> float:
         elif is_number(number):
             return float(number)
             
-        return 0.0
+    return 0.0
