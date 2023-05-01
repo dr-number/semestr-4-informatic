@@ -19,18 +19,18 @@ def init():
     x = sin_pow_a + cos_pow_a
 
     print(
-        f'{get_text_color("a =", COLOR_GREEN)} π/5 = {math.pi}/5 {get_text_color("= " + a, COLOR_GREEN)}\n'
-        f'{get_text_color("x =", COLOR_GREEN)} Sin^2(a) + Cos(a)^2 = Sin^2({a}) + Cos({a})^2 = {sin_pow_a} + {cos_pow_a} {get_text_color("=" + x, COLOR_GREEN)}\n'
+        f'{get_text_color("a =", COLOR_GREEN)} π/5 = {math.pi}/5 = {get_text_color(a, COLOR_GREEN)}\n'
+        f'{get_text_color("x =", COLOR_GREEN)} Sin^2(a) + Cos(a)^2 = Sin^2({a}) + Cos({a})^2 = {sin_pow_a} + {cos_pow_a} = {get_text_color(x, COLOR_GREEN)}\n'
     )
 
     y = None
     if x >= 1:
         y = cmath.sqrt(-1)
-        print(f'Т.к {x} >= 1 => y = √-1 = {y}')
+        print(f'Т.к {x} >= 1 => y = √-1 = {get_text_color(y, COLOR_GREEN)}')
     elif x < 1:
         ex = math.exp(x)
         y = math.cos(ex - 1)^ex
-        print(f'Т.к {x} < 1 => y = Cos(e^x - 1)^e^x = Cos(e^{x} - 1)^e^{x} = {y}')
+        print(f'Т.к {x} < 1 => y = Cos(e^x - 1)^e^x = Cos(e^{x} - 1)^e^{x} = {get_text_color(y, COLOR_GREEN)}')
 
     if y is None:
         print(
@@ -40,6 +40,6 @@ def init():
 
     f = y + 5.6
     print(
-        f'{get_text_color("F =", COLOR_GREEN)} y+5.6 = {y}+5.6 {get_text_color("= " + f, COLOR_GREEN)}\n'
+        f'{get_text_color("F =", COLOR_GREEN)} y+5.6 = {y}+5.6 = {get_text_color(f, COLOR_GREEN)}\n'
     )
     
