@@ -130,3 +130,10 @@
       <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/option3.png">
    </p>
 </figure>
+
+<figure>
+   <p align="center">Точка внутри квадрата (пользовательские данные)</p>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/option5.png">
+   </p>
+</figure>
