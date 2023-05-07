@@ -6,6 +6,9 @@ _COLOR_ENDC = '\033[0m'
 def get_text_color(text: str, color: str)-> str:
     return f'{color}{text}{_COLOR_ENDC}'
 
+def is_question(text: str)-> bool:
+    return input(f'{get_text_color(text, COLOR_WARNING)} [Y/n]: ').lower() != 'n' 
+
 def is_number(str)-> bool:
     try:
         float(str)
