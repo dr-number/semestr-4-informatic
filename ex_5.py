@@ -35,20 +35,29 @@ _DEFAULT_COORDINATES_SQUARE = Sqare(
     point_end=Point(x=1, y=-1)
 )
 def init():
-    _default_square = _DEFAULT_COORDINATES_SQUARE
+    square = _DEFAULT_COORDINATES_SQUARE
     print(
         f'{get_text_color("Определить, лежит ли точка с координатами (x,y) внутри квадрата", COLOR_WARNING)}\n'
-        f'Исходный квадрат:\n{get_text_color(_default_square.get_info(), COLOR_GREEN)}\n'
+        f'Исходный квадрат:\n{get_text_color(square.get_info(), COLOR_GREEN)}\n'
     )
 
     if is_question("Хотите изменить исходный квадрат?"):
-        _default_square.change()
+        square.change()
 
     point = Point()
     point.change("Точка внутри квадрата")
 
     print(
         f'{get_text_color("Исходные данные", COLOR_WARNING)}\n\n'
-        f'Квадрат:\n{get_text_color(_default_square.get_info(), COLOR_GREEN)}'
+        f'Квадрат:\n{get_text_color(square.get_info(), COLOR_GREEN)}'
         f'Точка: {get_text_color(point.get_info(), COLOR_WARNING)}\n'
     )
+
+    if (square.point_end.x > point.x > square.point_start.x and
+        square.point_end.y > point.y > square.point_start.y):
+        print(get_text_color(f"Точка лежит внутри квадрата", COLOR_GREEN))
+    elif ((square.point_end.x == point.x or square.point_start.x == point.x) or
+        (square.point_end.y == point.y or square.point_start.y == point.y)):
+        print(get_text_color(f"Точка лежит на границе квадрата", COLOR_WARNING))
+    else:
+        print(get_text_color(f"Точка лежит за пределами квадрата!", COLOR_FAIL))
