@@ -26,6 +26,10 @@ def init():
     )
 
     _max = max(a, b)
+    if _max == 0:
+        print(get_text_color(f"Ошибка Т.к max({a}, {b}) равен 0!", COLOR_FAIL))
+        return
+
     t = math.log(_max)
     print(f'{get_text_color("t", COLOR_GREEN)} = ln(max(a, b)) = ln(max({a}, {b})) = ln({_max}) = {t}')
 
