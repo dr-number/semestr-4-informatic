@@ -30,6 +30,36 @@ class Sqare:
         self.point_start.change("Начальная точка")
         self.point_end.change("Конечная точка")
 
+    def is_in_square(self, p: Point)-> bool:
+        a = self.point_start
+        c = self.point_end
+        b = Point(c.x, a.y)
+        d = Point(a.x, c.y)
+
+        x = p.x
+        y = p.y
+
+        bax = b.x - a.x
+        bay = b.y - a.y
+        dax = d.x - a.x
+        day = d.y - a.y
+
+        if ((x - a.x) * bax + (y - a.y) * bay < 0.0):
+            return False
+
+        if ((x - b.x) * bax + (y - b.y) * bay > 0.0):
+            return False
+
+        if ((x - a.x) * dax + (y - a.y) * day < 0.0):
+            return False
+
+        if ((x - d.x) * dax + (y - d.y) * day > 0.0):
+            return False
+
+        return True
+
+
+
 _DEFAULT_COORDINATES_SQUARE = Sqare(
     point_start=Point(x=-1, y=1),
     point_end=Point(x=1, y=-1)
@@ -53,15 +83,7 @@ def init():
         f'Точка: {get_text_color(point.get_info(), COLOR_WARNING)}\n'
     )
 
-    in_y = square.point_start.y > point.y > square.point_end.y
-    in_x = square.point_start.x < point.x < square.point_end.x
-
-    if (in_x and in_y):
+    if square.is_in_square(point):
         print(get_text_color(f"Точка лежит внутри квадрата", COLOR_GREEN))
-    elif (
-        (in_y and square.point_end.x == point.x == square.point_start.x) or
-        (in_x and square.point_end.y == point.y == square.point_start.y)
-        ):
-        print(get_text_color(f"Точка лежит на границе квадрата", COLOR_WARNING))
     else:
         print(get_text_color(f"Точка лежит за пределами квадрата!", COLOR_FAIL))
