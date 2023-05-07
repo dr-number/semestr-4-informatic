@@ -44,4 +44,11 @@ def init():
     if is_question("Хотите изменить исходный квадрат?"):
         _default_square.change()
 
-    
+    point = Point()
+    point.change("Точка внутри квадрата")
+
+    print(
+        f'{get_text_color("Исходные данные", COLOR_WARNING)}\n'
+        f'Квадрат:\n{get_text_color(_default_square.get_info(), COLOR_GREEN)}\n'
+        f'Точка: {get_text_color(point.get_info(), COLOR_GREEN)}\n'
+    )
