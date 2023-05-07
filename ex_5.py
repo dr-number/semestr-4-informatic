@@ -54,7 +54,7 @@ def init():
     )
 
     if (square.point_end.x > point.x > square.point_start.x and
-        square.point_end.y > point.y > square.point_start.y):
+        square.point_end.y < point.y < square.point_start.y):
         print(get_text_color(f"Точка лежит внутри квадрата", COLOR_GREEN))
     elif ((square.point_end.x == point.x or square.point_start.x == point.x) or
         (square.point_end.y == point.y or square.point_start.y == point.y)):

@@ -95,3 +95,17 @@
       <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_4/error_custom_data.png">
    </p>
 </figure>
+
+**задание №5**
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/info.png">
+   </p>
+</figure>
+
+<figure>
+   <p align="center">Точка внутри квадрата</p>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/option1.png">
+   </p>
+</figure>
