@@ -5,12 +5,15 @@ _DEFAULT_A = 6.3
 _DEFAULT_B = 5.9
 
 def init():
+    _example = (
+        '     | 0.5 * t, если t > 2.4\n'
+        's = <\n'
+        '     | t + 2.4, если t <= 2.4,  где\n'
+        't = ln(max(a, b))\n'
+    )
     print(
         f'Вычислить значение {get_text_color("s", COLOR_GREEN)}, где\n'
-        f'     | 0.5 * t, если t > 2.4\n'
-        f's = <\n'
-        f'     | t + 2.4, если t <= 2.4,  где\n'
-        f't = ln(max(a, b))\n'
+        f'{get_text_color(_example, COLOR_GREEN)}'
     )
 
     a = input_number(f'Введите значение а: (по умолчанию {_DEFAULT_A})', _DEFAULT_A)
