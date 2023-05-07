@@ -116,3 +116,10 @@
       <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/option2.png">
    </p>
 </figure>
+
+<figure>
+   <p align="center">Точка на границе квадрата</p>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/option3.png">
+   </p>
+</figure>
