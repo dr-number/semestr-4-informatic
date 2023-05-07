@@ -26,3 +26,10 @@
    </p>
 </figure>
 
+<figure>
+   <p align="center">Результат с пользовательскими данными и реакция на некорректные данные</p>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_1/custom_data.png">
+   </p>
+</figure>
+
