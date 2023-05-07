@@ -13,13 +13,21 @@ def is_number(str)-> bool:
     except ValueError:
         return False
         
-def input_number(text: str, default_value: float)-> float:
+def input_number(text: str, default_value: float = None, min: float = None, max: float = None)-> float:
     while True:
         number = input(f'{get_text_color(text, COLOR_WARNING)} ')
         if number == '':
-            return default_value
+            if default_value is not None:
+                return default_value
+            else:
+                print(get_text_color(f"Введите число!", COLOR_FAIL))
         elif is_number(number):
-            return float(number)
+            if min is not None and float(number) < min:
+                print(get_text_color(f"Минимально допустимое число - {min}!", COLOR_FAIL))
+            elif max is not None and float(number) > max:
+                print(get_text_color(f"Максимально допустимое число - {max}!", COLOR_FAIL))
+            else:
+                return float(number)
         else:
             print(get_text_color(f"\"{number}\" - не число! Повторите ввод!", COLOR_FAIL))
             

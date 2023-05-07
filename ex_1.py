@@ -7,6 +7,8 @@ _DEFAULT_PK = 47
 _DEFAULT_EN = 11858
 _DEFAULT_VN = 154
 _DEFAULT_F1 = 1250
+_MIN_VALUE = 1
+_MAX_VALUE = 9999999999
 
 def init():
     print(
@@ -22,14 +24,47 @@ def init():
         f'{get_text_color("Vn", COLOR_GREEN)} - сверхплановые запасы неустановленного оборудования.\n\n'
     )
     
-    pb = input_number(f'Введите балансовую прибыль: (по умолчанию {_DEFAULT_PB})', _DEFAULT_PB)
-    pfe = input_number(f'Введите плату за фонды: (по умолчанию {_DEFAULT_PFE})', _DEFAULT_PFE)
-    pf = input_number(f'Введите финансируемые платежи: (по умолчанию {_DEFAULT_PF})', _DEFAULT_PF)
-    pk = input_number(f'Введите процент за кредит: (по умолчанию {_DEFAULT_PK})', _DEFAULT_PK)
+    pb = input_number(
+        text=f'Введите балансовую прибыль [Pб]: (по умолчанию {_DEFAULT_PB})', 
+        default_value=_DEFAULT_PB,
+        min=_MIN_VALUE,
+        max=_MAX_VALUE
+    )
+    pfe = input_number(
+        text=f'Введите плату за фонды [Pfe]: (по умолчанию {_DEFAULT_PFE})', 
+        default_value=_DEFAULT_PFE,
+    )
+    pf = input_number(
+        text=f'Введите финансируемые платежи [Pf]: (по умолчанию {_DEFAULT_PF})', 
+        default_value=_DEFAULT_PF,
+        min=_MIN_VALUE,
+        max=_MAX_VALUE
+    )
+    pk = input_number(
+        text=f'Введите процент за кредит [Pk]: (по умолчанию {_DEFAULT_PK})', 
+        default_value=_DEFAULT_PK,
+        min=_MIN_VALUE,
+        max=_MAX_VALUE
+    )
     
-    f1 = input_number(f'Введите среднюю стоимость основных фондов: (по умолчанию {_DEFAULT_F1})', _DEFAULT_F1)
-    en = input_number(f'Введите нормируемые оборотные средства: (по умолчанию {_DEFAULT_EN})', _DEFAULT_EN)
-    vn = input_number(f'Введите сверхплановые запасы неустановленного оборудования: (по умолчанию {_DEFAULT_VN})', _DEFAULT_VN)
+    f1 = input_number(
+        text=f'Введите среднюю стоимость основных фондов [F1]: (по умолчанию {_DEFAULT_F1})', 
+        default_value=_DEFAULT_F1,
+        min=_MIN_VALUE,
+        max=_MAX_VALUE
+    )
+    en = input_number(
+        text=f'Введите нормируемые оборотные средства [En]: (по умолчанию {_DEFAULT_EN})', 
+        default_value=_DEFAULT_EN,
+        min=_MIN_VALUE,
+        max=_MAX_VALUE
+    )
+    vn = input_number(
+        text=f'Введите сверхплановые запасы неустановленного оборудования [Vn]: (по умолчанию {_DEFAULT_VN})',
+        default_value=_DEFAULT_VN,
+        min=_MIN_VALUE,
+        max=_MAX_VALUE
+    )
     
     print(
         f'\n{get_text_color("Исходные данные:", COLOR_WARNING)}\n'
