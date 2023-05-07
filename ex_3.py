@@ -5,12 +5,15 @@ _DEFAULT_A = 12.6
 _DEFAULT_X = 0.93
 
 def init():
+    _example = (
+        '     | z  , если z >= 0\n'
+        'y = <  0  , если -1 <= z < 0\n'
+        '     | z^2, если z < -1\n\n'
+        'z = a*Sin(x)\n'
+    )
     print(
         f'Вычислить значение {get_text_color("y = f + a", COLOR_GREEN)}, где\n'
-        f'     | z  , если z >= 0\n'
-        f'y = <  0  , если -1 <= z < 0\n'
-        f'     | z^2, если z < -1\n\n'
-        f'z = a*Sin(x)\n'
+        f'{get_text_color(_example, COLOR_GREEN)}'
     )
 
     a = input_number(f'Введите значение а: (по умолчанию {_DEFAULT_A})', _DEFAULT_A)
