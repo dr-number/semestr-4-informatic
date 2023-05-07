@@ -53,8 +53,8 @@ def init():
         f'Точка: {get_text_color(point.get_info(), COLOR_WARNING)}\n'
     )
 
-    in_y = square.point_end.y < point.y < square.point_start.y
-    in_x = square.point_end.x > point.x > square.point_start.x
+    in_y = square.point_start.y > point.y > square.point_end.y
+    in_x = square.point_start.x < point.x < square.point_end.x
 
     if (in_x and in_y):
         print(get_text_color(f"Точка лежит внутри квадрата", COLOR_GREEN))
