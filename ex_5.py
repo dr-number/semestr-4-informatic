@@ -7,7 +7,7 @@ class Point:
         self.y = y
     
     def get_info(self):
-        return f'x: {self.x}; y: {self.y}'
+        return f'({self.x}; {self.y})'
 
     def change(self, prefix: str):
         self.x = input_number(f"{prefix}. Введите координату х:")
@@ -23,7 +23,7 @@ class Sqare:
     def get_info(self):
         return (
             f'start: {self.point_start.get_info()}\n'
-            f'end: {self.point_end.get_info()}\n'
+            f'end:   {self.point_end.get_info()}\n'
         )
     
     def change(self):
@@ -48,7 +48,7 @@ def init():
     point.change("Точка внутри квадрата")
 
     print(
-        f'{get_text_color("Исходные данные", COLOR_WARNING)}\n'
-        f'Квадрат:\n{get_text_color(_default_square.get_info(), COLOR_GREEN)}\n'
-        f'Точка: {get_text_color(point.get_info(), COLOR_GREEN)}\n'
+        f'{get_text_color("Исходные данные", COLOR_WARNING)}\n\n'
+        f'Квадрат:\n{get_text_color(_default_square.get_info(), COLOR_GREEN)}'
+        f'Точка: {get_text_color(point.get_info(), COLOR_WARNING)}\n'
     )
