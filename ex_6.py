@@ -63,13 +63,8 @@ def init():
             formul = f'{x} * 0.5'
             result = x * 0.5
             color = COLOR_OKCYAN
-        elif x >= -1:
-            select = f'Т.к. x >= -1 -> {x} >= -1 -> y = 0'
-            formul = '0'
-            result = '0'
-            color = COLOR_OKBLUE
-        elif x <= 1:
-            select = f'Т.к. x <= 1 -> {x} <= 1 -> y = x'
+        elif x <= 1 and x <= 0:
+            select = f'Т.к. 0 >= x <= 1 -> 0 >= {x} <= 1 -> y = x'
             formul = f'x'
             result = f'{x}'
             color = COLOR_WARNING
@@ -78,6 +73,11 @@ def init():
             formul = f'1'
             result = f'1'
             color = COLOR_GREEN
+        elif x >= -1:
+            select = f'Т.к. x >= -1 -> {x} >= -1 -> y = 0'
+            formul = '0'
+            result = '0'
+            color = COLOR_OKBLUE
         else:
             select = ''
             formul = 'Не подходит под условие задачи!'
