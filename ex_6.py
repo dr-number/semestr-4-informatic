@@ -1,5 +1,5 @@
 from helpers import get_text_color, input_number, COLOR_OKBLUE, COLOR_GREEN, COLOR_OKCYAN, COLOR_FAIL, COLOR_WARNING
-_FORMAT = '| {:10} | {:30} | {:60} | {:35} | {:30} |'
+_FORMAT = '| {:10} | {:10} | {:50} | {:20} | {:10} |'
 
 _DEFAULT_STEP = 0.2
 _MIN_STEP = 0.1
@@ -57,24 +57,24 @@ def init():
     x = start_x
     i = 1
     while start_x <= x <= end_x:
-
+        str_x = round(x, 6)
         if x < -1:
-            select = f'Т.к. x < -1 -> {x} < -1 -> y = x * 0.5'
-            formul = f'{x} * 0.5'
-            result = x * 0.5
+            select = f'Т.к. x < -1 -> {str_x} < -1 -> y = x * 0.5'
+            formul = f'{str_x} * 0.5'
+            result = round(x * 0.5, 6)
             color = COLOR_OKCYAN
         elif x >= -1 and x <= 0:
-            select = f'Т.к. 0 =< x >= -1 -> 0 =< {x} >= -1 -> y = 0'
+            select = f'Т.к. 0 =< x >= -1 -> 0 =< {str_x} >= -1 -> y = 0'
             formul = '0'
             result = '0'
             color = COLOR_OKBLUE
         elif x <= 1:
-            select = f'Т.к. x <= 1 -> {x} <= 1 -> y = x'
+            select = f'Т.к. x <= 1 -> {str_x} <= 1 -> y = x'
             formul = f'x'
-            result = f'{x}'
+            result = f'{str_x}'
             color = COLOR_WARNING
         elif x > 1:
-            select = f'Т.к. x > 1 -> {x} > 1 -> y = 1'
+            select = f'Т.к. x > 1 -> {str_x} > 1 -> y = 1'
             formul = f'1'
             result = f'1'
             color = COLOR_GREEN
@@ -86,7 +86,7 @@ def init():
 
         print(get_text_color(_FORMAT.format(*[
             f'{i}',
-            f'{x}',
+            f'{str_x}',
             select, 
             formul, 
             result
