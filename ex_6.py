@@ -1,5 +1,5 @@
 from helpers import get_text_color, input_number, COLOR_OKBLUE, COLOR_GREEN, COLOR_OKCYAN, COLOR_FAIL, COLOR_WARNING
-_FORMAT = '| {:10} | {:60} | {:35} | {:30} |'
+_FORMAT = '| {:10} | {:30} | {:60} | {:35} | {:30} |'
 
 _DEFAULT_STEP = 0.1
 _MIN_STEP = 0.1
@@ -48,6 +48,7 @@ def init():
 
     print(_FORMAT.format(*[
         '№',
+        'x',
         'Выбор', 
         'Формула', 
         'результат'
@@ -85,6 +86,7 @@ def init():
 
         print(get_text_color(_FORMAT.format(*[
             f'{i}',
+            f'{x}',
             select, 
             formul, 
             result
