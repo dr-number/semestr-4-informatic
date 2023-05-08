@@ -94,3 +94,5 @@ def init():
 
         x += step_x
         i += 1
+    
+    print(f'Количество вычислений: {get_text_color(str(i), COLOR_GREEN)}')
