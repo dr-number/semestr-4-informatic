@@ -1,17 +1,17 @@
 from helpers import get_text_color, input_number, COLOR_OKBLUE, COLOR_GREEN, COLOR_OKCYAN, COLOR_FAIL, COLOR_WARNING
 _FORMAT = '| {:10} | {:30} | {:60} | {:35} | {:30} |'
 
-_DEFAULT_STEP = 0.1
+_DEFAULT_STEP = 0.2
 _MIN_STEP = 0.1
 _MAX_STEP = 1
 
 _MIN_START_X = -10
 _MAX_START_X = -2
-_DEFAULT_START_X = -2
+_DEFAULT_START_X = -3
 
 _MIN_END_X = 2
 _MAX_END_X = 20
-_DEFAULT_END_X = 2
+_DEFAULT_END_X = 3
 
 def init():
     _example = (
@@ -95,4 +95,4 @@ def init():
         x += step_x
         i += 1
     
-    print(f'Количество вычислений: {get_text_color(str(i), COLOR_GREEN)}')
+    print(f'Количество вычислений: {get_text_color(str(i - 1), COLOR_GREEN)}')
