@@ -137,3 +137,17 @@
       <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_5/option5.png">
    </p>
 </figure>
+
+**задание №6**
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_6/info.png">
+   </p>
+</figure>
+
+<figure>
+   <p align="center">Результат (с данными по умолчанию)</p>
+   <p align="center">
+      <img src="https://github.com/dr-number/semestr-4-informatic/blob/main/for_read_me/ex_6/standart.png">
+   </p>
+</figure>
