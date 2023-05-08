@@ -1,18 +1,20 @@
 from helpers import get_text_color, COLOR_WARNING, COLOR_FAIL
-import ex_1, ex_2, ex_3, ex_4, ex_5
+import ex_1, ex_2, ex_3, ex_4, ex_5, ex_6
 
 _EX_1 = '1'
 _EX_2 = '2'
 _EX_3 = '3'
 _EX_4 = '4'
 _EX_5 = '5'
+_EX_6 = '6'
 
 _ARRAY_EX = {
     _EX_1: ex_1, 
     _EX_2: ex_2,  
     _EX_3: ex_3,  
     _EX_4: ex_4,  
-    _EX_5: ex_5 
+    _EX_5: ex_5,
+    _EX_6: ex_6,
 }
 
 def main():
@@ -25,6 +27,7 @@ def main():
             f"{get_text_color(f'{_EX_3}) ', COLOR_WARNING)}Вычислить значение y = f + a\n"
             f"{get_text_color(f'{_EX_4}) ', COLOR_WARNING)}Вычислить значение s\n"
             f"{get_text_color(f'{_EX_5}) ', COLOR_WARNING)}Определить, лежит ли точка с координатами (x,y) внутри квадрата\n"
+            f"{get_text_color(f'{_EX_6}) ', COLOR_WARNING)}По заданному графику функции вычислить ее значение\n"
         )
         select = input('Для выхода введите \'0\'\n')
 
